@@ -2,12 +2,18 @@ let AbstractPage = require('./AbstractPage.js').AbstractPage
 
 class HomePage extends AbstractPage {
     constructor(url) {
+        super()
         this.URL = ''
 
         this.searchField = $("input[name='searchStr']")
         this.goButton = element(by.buttonText('Go!')) //Button to launch search
         
         this.movieCards = element(by.cssContainingText('movies div', 'Search Results')).$$('movie-card')
+    }
+
+    open() {
+        super.open()
+        console.log('OPENED!')
     }
 
     searchForMovie(searchRequest) {
