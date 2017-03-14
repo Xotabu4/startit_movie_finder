@@ -11,11 +11,6 @@ class HomePage extends AbstractPage {
         this.movieCards = element(by.cssContainingText('movies div', 'Search Results')).$$('movie-card')
     }
 
-    open() {
-        super.open()
-        console.log('OPENED!')
-    }
-
     searchForMovie(searchRequest) {
         this.searchField.sendKeys(searchRequest)
         this.goButton.click()
