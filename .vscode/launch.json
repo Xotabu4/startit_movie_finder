@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "PROTRACTOR",
             "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
             "stopOnEntry": false,
             "args": ["${workspaceRoot}/protractor.conf.js", "--specs", "specs/spec.js"],
